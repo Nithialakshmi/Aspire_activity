@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- <link rel="stylesheet" href="addstudent.css">
+    <link rel="stylesheet" href="addstudent2.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="course1.css"> -->
+   
+
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+
+   
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addstudent.html">Add Student List</a>
+                            <a href="managestudent.html">Manage Student List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addcourse.html">Add Course List</a>
+                            <a href="managecourse.html">Manage Course List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addresult.html">Add Result</a>
+                            <!-- <a href="managecourse.html">Manage Course List</a> -->
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Password Change</span>
+                            <span class="caret"></span>
+                            <div class="dropdown-content">
+                          
+                                <a href="password.html">Admin Password Change</a>
+                               
+                            </div>
+                        </button>
+                    </div>
+                </li>
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="home1.html">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+                
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="text">Student List</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="text">Course List</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="text">Result Declared</span>
+                    </div>
+                </div>
+            </div>
+
+           
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="dashboard.css">  
+    <link rel="stylesheet" href="addstudent.css"> 
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>Admin to add the Student</title> 
+
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addstudent.html">Add Student List</a>
+                            <a href="managestudent.html">Manage Student List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addcourse.html">Add Course List</a>
+                            <a href="managecourse.html">Manage Course List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addresult.html">Add Result</a>
+                            <!-- <a href="managecourse.html">Manage Course List</a> -->
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Password Change</span>
+                            <span class="caret"></span>
+                            <div class="dropdown-content">
+                          
+                                <a href="password.html">Admin Password Change</a>
+                               
+                            </div>
+                        </button>
+                    </div>
+                </li>
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="home1.html">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+    <div class="dash-content" >
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span class="text">Add Student List</span>
+            </div>
+            
+            <table style="width:100%">
+                <tr>
+                  <th>Name</th>
+                  <th>FatherName</th>
+                  <th>RegisterNumber</th>
+                  <th>Department</th>
+                  <th>Year</th>
+                  <th>Gender</th>
+                  <th>DateofBirth</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Contact</th>
+                  <th>Action</th>
+                </tr>
+            <tr> 
+                <td>Asha K</td>
+                <td>Kumar</td>
+                <td>201021070</td>
+                <td>CSE</td>
+                <td>I</td>
+                <td>Female</td>
+                <td>07.06.2005</td>
+                <td>asha@gmail.com</td>
+                <td>Asha7605@dream</td>
+                <td>9344250498</td>
+                <td>  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Edit</button>
+              <button onclick="document.getElementById('id102').style.display='block'" class="w3-button w3-black">Delete</button></td>
+            </tr>              
+              </table>
+    </div>
+
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span> 
+      
+
+        <div class="dash-content" >
+            <div class="overview">
+                
+                
+                <div>
+                    <div class="main" style="margin-left: 95px;">
+                        <h2 style=" text-align:center;">Edit Student List</h2>
+                        <!-- <div style="height: 700px;">  -->
+                        <form name="myform" method="post" action="#" onsubmit="return validateform()">
+                            <label for="first"
+                                >Name:</label
+                            >
+                            <input
+                                type="text"
+                                id="first"
+                                name="first"
+                                required
+                            />
+                            <label for="fname"
+                                >Father Name:</label
+                            >
+                            <input
+                                type="text"
+                                id="fname"
+                                name="fname"
+                                required
+                            />
+                            <label for="rollno"
+                            >Register Number:</label
+                        >
+                        <input
+                            type="text"
+                            id="rollno"
+                            name="rollno"
+                            required
+                        />
+                            <label for="dept">Department</label>
+                            <select id="dept" name="dept">
+                                <option value="none">None</option>
+                                <option value="CSE">CSE</option>
+                              <option value="IT">IT</option>
+                              <option value="EEE">EEE</option>
+                              <option value="ECE">ECE</option>
+                              <option value="AIDS">AIDS</option>
+                              <option value="AIML">AIML</option>
+                            </select><br>
+    
+                            <label for="year">Year</label>
+                            <select id="year" name="year">
+                                <option value="none">None</option>
+                                <option value="I">I</option>
+                              <option value="II">II</option>
+                              <option value="III">III</option>
+                              <option value="IV">IV</option>
+                            </select><br>
+    
+                            <label for="semester">semester</label>
+                            <select id="semester" name="semester">
+                                <option value="none">None</option>
+                                <option value="odd">Odd</option>
+                              <option value="even">Even</option>
+                            </select><br>
+            
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="none">None</option>
+                                <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="others">others</option>
+                            </select><br>
+    
+                            <label for = "dateofBirth">DateOfBirth</label>
+                            <input type ="date" id="dateofBirth">
+            
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+            
+                            <label for="password"
+                                >Password:</label
+                            >
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                                title="Password must contain at least one number, 
+                                    one alphabet, one symbol, and be at 
+                                    least 8 characters long"
+                                required
+                            />
+            
+                            <label for="mobile"
+                                >Contact:</label
+                            >
+                            <input
+                                type="text"
+                                id="mobile"
+                                name="mobile"
+                                maxlength="10"
+                                required
+                            />
+            
+                            <button type="submit" >
+                                <a href="#">
+                                Submit
+                                </a>
+                            </button>
+                        </form>
+                    <!-- </div> -->
+                    </div>
+            </div>
+            </div>
+    
+                </div>
+            </div>
+        </div>
+</section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
+
+
+
+   
+   
+
+ 
+    
+      

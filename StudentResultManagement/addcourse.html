@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="dashboard.css">  
+    <link rel="stylesheet" href="addstudent.css"> 
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>Admin to add the Student</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addstudent.html">Add Student List</a>
+                            <a href="managestudent.html">Manage Student List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addcourse.html">Add Course List</a>
+                            <a href="managecourse.html">Manage Course List</a>
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- Dropdown content here -->
+                            <a href="addresult.html">Add Result</a>
+                            <!-- <a href="managecourse.html">Manage Course List</a> -->
+                            <!-- Add more options as needed -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Password Change</span>
+                            <span class="caret"></span>
+                            <div class="dropdown-content">
+                          
+                                <a href="password.html">Admin Password Change</a>
+                               
+                            </div>
+                        </button>
+                    </div>
+                </li>
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="home1.html">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+    <div class="dash-content" >
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span class="text">Add Course</span>
+            </div>
+            
+            <div>
+                <div class="main" style="margin-left: 95px; align-items: center;">
+                    <h2 style=" text-align:center;">Create Course Details</h2>
+                    <!-- <div style="height: 700px;">  -->
+                    <form name="myform" method="post" action="#" onsubmit="return validateform()">
+                        <label>Course Id </label>
+                      <input type="text" name="courseid" id="courseid"/>
+                       <label>Course Name </label>
+                         <input type="text" name="coursename" id="coursename"/>
+                         <label for="dept">Department</label>
+                        <select id="dept" name="dept">
+                            <option value="none">None</option>
+                            <option value="CSE">CSE</option>
+                          <option value="IT">IT</option>
+                          <option value="EEE">EEE</option>
+                          <option value="ECE">ECE</option>
+                          <option value="AIDS">AIDS</option>
+                          <option value="AIML">AIML</option>
+                        </select><br>
+
+                        <label for="year">Year</label>
+                        <select id="year" name="year">
+                            <option value="none">None</option>
+                            <option value="I">I</option>
+                          <option value="II">II</option>
+                          <option value="III">III</option>
+                          <option value="IV">IV</option>
+                        </select><br>
+
+                        <label for="semester">semester</label>
+                        <select id="semester" name="semester">
+                            <option value="none">None</option>
+                            <option value="odd">Odd</option>
+                          <option value="even">Even</option>
+                        </select><br>
+                         
+                         <button type="submit" style="color: white;">
+                            <a href="#">
+                            Submit
+                            </a>
+                        </button>
+                    </form>
+                <!-- </div> -->
+                </div>
+        </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
