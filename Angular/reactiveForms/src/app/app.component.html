@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Employee Registration Form</h1>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="fullName">Full Name</label>
+      <input id="fullName" formControlName="fullName">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="employeeId">Employee ID</label>
+      <input id="employeeId" formControlName="employeeId">
+    </div>
+    <div>
+      <label for="department">Department</label>
+      <input id="department" formControlName="department">
+    </div>
+    <div>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <div [ngClass]="messageClass" *ngIf="message">{{ message }}</div>
+</div>
