@@ -1,0 +1,16 @@
+//Title: Collections
+//Author: Nithialakshmi.N
+//Last modified date:31/5/2024
+
+
+Collection
+Collection is represents a group of objects, known as its elements/items.
+Collection Types 
+
+Set - not allow duplicated                 HashSet, TreeSet
+List - allow duplicate                     ArrayList, LinkedList 
+Map           - Key and value pair         HashMap,  TreeMap
+Dictionary    -Key and Value pair
+
+Stack -(First In First Out)FIFO
+Queue -(Last In First Out)LIFO
