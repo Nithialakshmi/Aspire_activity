@@ -1,0 +1,81 @@
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #030303;
+    font-weight: bold;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #261a46;
+    width: 50%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+  
+}
+
+
+
+
+
+ .background-container {
+    background-image: url("https://t4.ftcdn.net/jpg/06/30/82/89/240_F_630828931_dXWIgcCtH5xmyjOO7mlB5Oj3UULGQbAl.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+  }  
+  
+  
+
+  .container .box {
+    display : flex;
+   flex-direction : row;
+    
+ }
+ .container .box .box-cell.box1 {
+ 
+     color:rgb(0, 0, 0);
+     text-align:justify;
+     margin-left: 35px;
+  }
+ .container .box .box-cell.box2 {
+   
+     text-align:justify
+ }
+
+
+
+
+
+
+
+  

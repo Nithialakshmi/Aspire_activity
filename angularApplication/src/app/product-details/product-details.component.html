@@ -1,0 +1,45 @@
+   <div *ngIf="product">
+    <div class="product-container">  
+  <div class="product-column"> 
+    <h1>{{ product.name }}</h1>
+    <div class="product-image">
+      <img *ngFor="let image of product.images" [src]="image" [alt]="product.name" class="equal-dimensions">
+    </div>
+  </div>
+  <div class="product-column"> 
+    <div class="product-description">
+      <h2>Product-Description</h2> 
+    <p>Price: Rs. {{ product.price }}</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>Categories: {{ product.categories }}</p>
+    <p>
+      <span *ngFor="let star of [1, 2, 3, 4, 5]">
+        <i [ngClass]="{'filled-star': star <= product.rating, 'empty-star': star > product.rating}">★</i>
+      </span>
+    </p>
+   </div>
+    <div class="product-specifications">
+      <h2>Specifications</h2>
+      <p>{{ product.specifications }}</p>
+    </div>
+    <div class="product-reviews">
+      <h2>Customer Reviews</h2>
+      <ul>
+        <li *ngFor="let review of product.reviews">{{ review }}</li>
+      </ul>
+    </div>
+ 
+    <button (click)="addToCart(product)">Add to Cart</button> </div>
+   </div>
+  </div>
+
+  <div *ngIf="!product">
+    <p>Loading...</p>
+  </div>
+
+
+
+
+ 
+  
+  

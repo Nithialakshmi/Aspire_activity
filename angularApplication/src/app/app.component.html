@@ -1,0 +1,58 @@
+<!-- title:GroceryMart(Ecommerce Angular Application)
+Author:Nithialakshmi
+Starting Date:13.07.2024
+LastModified Date:23.08.2024 -->
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a routerLink="/" routerLinkActive="active">GroceryMart</a>
+    </div>
+    <div class="navbar-links">
+   
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a *ngIf="!isAuthenticated" routerLink="/login" routerLinkActive="active">Login</a>
+      <a *ngIf="isAuthenticated" routerLink="/product" routerLinkActive="active">Product</a>
+      <a *ngIf="isAuthenticated" routerLink="/cart" routerLinkActive="active">Cart</a>
+      <a *ngIf="isAuthenticated" routerLink="/order-history" routerLinkActive="active">Order</a>
+      <a *ngIf="isAuthenticated" href="/home" (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>
+<div>
+  
+ 
+  <router-outlet>
+   
+  </router-outlet>
+</div>
+<footer style="text-align: center;background-color:#261a46 ;">
+  <div class="row"> 
+    <div class="column" style="color: azure;"> 
+      <ul> <a routerLink="/contact" routerLinkActive="active" style="color: azure;"><h2> Contact Us</h2> </a> </ul>
+      <li>Phone Number</li>
+      <p>(+91)9012345876</p>
+     <li>Email Address</li>
+      <p>grocerymart&#64;gmail.com </p>
+    </div>
+    <div class="column" > 
+    </div>
+    <div class="column" > 
+      <ul>
+        <h2 style="color: azure;"> Follow us</h2>
+        <a href="#" class="fa fa-facebook"></a>   
+        <a href="#" class="fa fa-twitter"></a>   <br>   
+        <a href="#" class="fa fa-youtube"></a>     
+        <a href="#" class="fa fa-instagram"></a>
+      
+      </ul>
+    </div>
+
+  </div>
+  <p style="color: white; height: 100%;">copyright  &copy; 2024 All rights are reserved. </p>
+</footer>

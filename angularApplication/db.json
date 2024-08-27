@@ -1,0 +1,343 @@
+{
+  "users": [],
+  "signupUsers": [
+    {
+      "id": 1,
+      "email": "nithish@gmail.com",
+      "username": "Nithish",
+      "password": "Nithish@123",
+      "mobileNumber": "8086909087"
+    },
+    {
+      "username": "Priyadharshini",
+      "email": "priyadharshini@gmail.com",
+      "password": "Priya@123",
+      "mobileNumber": "7368790251",
+      "id": 2
+    },
+    {
+      "username": "Janaranjani",
+      "email": "janaranjani@gmail.com",
+      "password": "Janaranjani@123",
+      "mobileNumber": "7986534180",
+      "id": 3
+    },
+    {
+      "username": "Krishna",
+      "email": "krishna@gmail.com",
+      "password": "Krishna@123",
+      "mobileNumber": "9997665482",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cinnamon",
+      "price": 55,
+      "quantity": "200g",
+      "categories": "Spices",
+      "image": "https://www.jiomart.com/images/product/original/rvdlychvuj/yum-yum-dalchini-cinnamon-stick-200-g-pack-of-2-100g-each-2-x-100-g-legal-images-orvdlychvuj-p596847174-3-202301010713.jpg?im=Resize=(420,420)",
+      "images": [
+        "https://images.meesho.com/images/products/291391354/tj2h0_512.webp",
+        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT0JNnwFJlpoJMQhXU5dOfUAEvpeNjERErBcWIU8oWmb-LDwCTV"
+      ],
+      "specifications": "High-quality cinnamon sticks.",
+      "reviews": [
+        "Great for baking.",
+        "Strong and fresh aroma."
+      ],
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "name": "Harpic",
+      "price": 55,
+      "quantity": "1liters",
+      "categories": "Cleaning items",
+      "image": "https://th.bing.com/th?id=OIP.qhuxdekuF-Oqm35W9_l4NQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      "images": [
+        "https://th.bing.com/th?id=OIP.qhuxdekuF-Oqm35W9_l4NQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+      ],
+      "specifications": "Powerful toilet cleaner, kills germs and removes stains.",
+      "reviews": [
+        "Very effective cleaner.",
+        "Does the job well."
+      ],
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "name": "Lays",
+      "price": 5,
+      "quantity": "24g",
+      "categories": "Snacks",
+      "image": "https://www.bigbasket.com/media/uploads/p/xxl/294283_18-lays-potato-chips-spanish-tomato-tango.jpg",
+      "images": [
+        "https://www.bigbasket.com/media/uploads/p/xxl/294283_18-lays-potato-chips-spanish-tomato-tango.jpg",
+        "https://www.lays.com/sites/lays.com/files/styles/product_thumbnail/public/2022-05/XL%20Lays%20Flamin%20Hot%20New.png?itok=tChFbSyj"
+      ],
+      "specifications": "Crispy and tasty potato chips.",
+      "reviews": [
+        "Delicious and crunchy.",
+        "A bit too salty for my taste."
+      ],
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "name": "Apple",
+      "price": 80,
+      "quantity": "1kg",
+      "categories": "Fruits and Vegetables",
+      "image": "https://www.shutterstock.com/image-photo/red-apples-260nw-138524657.jpg",
+      "images": [
+        "https://www.shutterstock.com/image-photo/red-apples-260nw-138524657.jpg"
+      ],
+      "specifications": "Fresh and juicy apples.",
+      "reviews": [
+        "Very fresh and sweet.",
+        "Loved the taste."
+      ],
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "name": "Chilli Masala",
+      "price": 25,
+      "quantity": "200g",
+      "categories": "Masalas",
+      "image": "https://m.media-amazon.com/images/I/61eF2n6pUGL.jpg",
+      "images": [
+        "https://m.media-amazon.com/images/I/61eF2n6pUGL.jpg"
+      ],
+      "specifications": "Spicy and aromatic chilli masala.",
+      "reviews": [
+        "Adds great flavor to dishes.",
+        "Perfect for spicy food lovers."
+      ],
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "name": "Tomato",
+      "price": 15,
+      "quantity": "1kg",
+      "categories": "Fruits and Vegetables",
+      "image": "https://th.bing.com/th/id/OIP._k76-X-o_0c68YeH4aPGKAHaHc?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://5.imimg.com/data5/SELLER/Default/2024/2/390027031/AR/OE/TP/99773928/tomato-500x500.jpeg"
+      ],
+      "specifications": "Fresh red tomatoes, organically grown.",
+      "reviews": [
+        "Great quality!",
+        "Very fresh and tasty."
+      ],
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "name": "Cheese",
+      "price": 150,
+      "quantity": "200g",
+      "categories": "Dairy",
+      "image": "https://m.media-amazon.com/images/I/61+AzywctoL._AC_UF1000,1000_QL80_.jpg",
+      "images": [
+        "https://m.media-amazon.com/images/I/61+AzywctoL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "specifications": "Rich and creamy cheese.",
+      "reviews": [
+        "Very creamy and delicious.",
+        "Perfect for sandwiches."
+      ],
+      "rating": 3
+    },
+    {
+      "id": 8,
+      "name": "Grapes",
+      "price": 80,
+      "quantity": "1kg",
+      "categories": "Fruits and Vegetables",
+      "image": "https://thumbs.dreamstime.com/b/white-wine-grapes-background-20708511.jpg",
+      "images": [
+        "https://thumbs.dreamstime.com/b/white-wine-grapes-background-20708511.jpg"
+      ],
+      "specifications": "Fresh and juicy grapes.",
+      "reviews": [
+        "Very sweet and fresh.",
+        "Kids love them."
+      ],
+      "rating": 2
+    },
+    {
+      "id": 9,
+      "name": "Moong Dal",
+      "price": 107,
+      "quantity": "1kg",
+      "categories": "Pulses",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQLtywNzgnxQ9_praf1VuVP-zsmmp5v3HiveLBixjRv0Kp5Sdy3KS-6E-ltnfN_bTGv6qOK1n0Tcva25fyodwOa0_fBzr5KTJBpTGNOaQwrTRzfPEMV_Fo7_w",
+      "images": [
+        "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQLtywNzgnxQ9_praf1VuVP-zsmmp5v3HiveLBixjRv0Kp5Sdy3KS-6E-ltnfN_bTGv6qOK1n0Tcva25fyodwOa0_fBzr5KTJBpTGNOaQwrTRzfPEMV_Fo7_w"
+      ],
+      "specifications": "Moong Dal low in carbs and high in protein.",
+      "reviews": [
+        "Perfect for sambar food lovers.",
+        "Great quality."
+      ],
+      "rating": 2
+    }
+  ],
+  "checkoutSteps": [],
+  "orders": [
+    {
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Cinnamon",
+          "quantity": 3,
+          "price": 55
+        }
+      ],
+      "total": 165,
+      "shippingAddress": {
+        "address": "Thiru.Vi.Ka Street,Cuddalore",
+        "city": "Cuddalore",
+        "postalCode": "609170",
+        "country": "India"
+      },
+      "paymentMethod": {
+        "cardNumber": "4114176577514365 ",
+        "expiryDate": "11/2024",
+        "cvv": "154"
+      },
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "productId": 2,
+          "productName": "Harpic",
+          "quantity": 2,
+          "price": 55
+        },
+        {
+          "productId": 5,
+          "productName": "Chilli Masala",
+          "quantity": 1,
+          "price": 25
+        }
+      ],
+      "total": 135,
+      "shippingAddress": {
+        "address": "Kamarajar Street,Koliyanur",
+        "city": "Villupuram",
+        "postalCode": "605103",
+        "country": "India"
+      },
+      "paymentMethod": {
+        "type": "online",
+        "cardNumber": "61111444467321987",
+        "expiryDate": "11/2024",
+        "cvv": "546"
+      },
+      "id": 2
+    },
+    {
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Cinnamon",
+          "quantity": 3,
+          "price": 55
+        },
+        {
+          "productId": 7,
+          "productName": "Cheese",
+          "quantity": 2,
+          "price": 150
+        },
+        {
+          "productId": 6,
+          "productName": "Tomato",
+          "quantity": 2,
+          "price": 15
+        }
+      ],
+      "total": 495,
+      "shippingAddress": {
+        "address": "Natarajan Street,Chithambaram",
+        "city": "Cuddalore",
+        "postalCode": "609110",
+        "country": "India"
+      },
+      "paymentMethod": {
+        "type": "cod",
+        "cardNumber": "",
+        "expiryDate": "",
+        "cvv": ""
+      },
+      "id": 3
+    },
+    {
+      "items": [
+        {
+          "productId": 2,
+          "productName": "Harpic",
+          "quantity": 3,
+          "price": 55
+        },
+        {
+          "productId": 5,
+          "productName": "Chilli Masala",
+          "quantity": 3,
+          "price": 25
+        }
+      ],
+      "total": 240,
+      "shippingAddress": {
+        "address": "Natarajan Street,Chithambaram",
+        "city": "Cuddalore",
+        "postalCode": "609110",
+        "country": "India"
+      },
+      "paymentMethod": {
+        "type": "cod",
+        "cardNumber": "",
+        "expiryDate": "",
+        "cvv": ""
+      },
+      "id": 4
+    },
+    {
+      "items": [
+        {
+          "productId": 5,
+          "productName": "Chilli Masala",
+          "quantity": 2,
+          "price": 25
+        },
+        {
+          "productId": 7,
+          "productName": "Cheese",
+          "quantity": 3,
+          "price": 150
+        }
+      ],
+      "total": 500,
+      "shippingAddress": {
+        "address": "Subramaniyam Kovil Street, KK Nagar",
+        "city": "Villupuram",
+        "postalCode": "605 110",
+        "country": "India"
+      },
+      "paymentMethod": {
+        "type": "cod",
+        "cardNumber": "",
+        "expiryDate": "",
+        "cvv": ""
+      },
+      "id": 5
+    }
+  ],
+  "orderHistory": []
+}

@@ -1,0 +1,71 @@
+
+
+
+<div class="checkout-container">
+  
+
+ 
+  <div *ngIf="step === 0" class="step-container"style="text-align: center;">
+    <h2>Profile</h2>
+    <div *ngIf="userProfile">
+      <p>Username: {{ userProfile.username }}</p>
+      <p>Email: {{ userProfile.email }}</p>
+    </div>
+    <button (click)="nextStep()">Next</button>
+  </div>
+
+ 
+  <div *ngIf="step === 1" class="step-container">
+   
+    <form #checkoutForm="ngForm" (ngSubmit)="completePurchase()">
+      <h2>Checkout Process</h2>
+  
+      <h2>Shipping Address</h2>
+      <label for="address">Address:</label>
+      <input id="address" name="address" type="text" [(ngModel)]="checkoutData.shippingAddress.address" required>
+      <label for="city">City:</label>
+      <input id="city" name="city" type="text" [(ngModel)]="checkoutData.shippingAddress.city" required>
+      <label for="postalCode">Postal Code:</label>
+      <input id="postalCode" name="postalCode" type="text" [(ngModel)]="checkoutData.shippingAddress.postalCode" required>
+      <label for="country">Country:</label>
+      <input id="country" name="country" type="text" [(ngModel)]="checkoutData.shippingAddress.country" required>
+
+     
+    <h2>Payment Method</h2>
+    <label>
+  <input type="radio" name="paymentMethod" value="online" [(ngModel)]="checkoutData.paymentMethod.type" required>
+  Online Payment
+</label>
+<label>
+  <input type="radio" name="paymentMethod" value="cod" [(ngModel)]="checkoutData.paymentMethod.type" required>
+  Cash on Delivery
+</label>
+
+
+<div *ngIf="checkoutData.paymentMethod.type === 'online'">
+  <label for="cardNumber">Card Number:</label>
+  <input id="cardNumber" name="cardNumber" type="text" [(ngModel)]="checkoutData.paymentMethod.cardNumber" required>
+  
+  <label for="expiryDate">Expiry Date:</label>
+  <input id="expiryDate" name="expiryDate" type="text" [(ngModel)]="checkoutData.paymentMethod.expiryDate" required>
+  
+  <label for="cvv">CVV:</label>
+  <input id="cvv" name="cvv" type="text" [(ngModel)]="checkoutData.paymentMethod.cvv" required>
+</div>
+
+    
+
+      <div class="review-order-container">
+        <h2>Review Order</h2>
+        <div *ngFor="let item of cartItems$ | async">
+          <div>{{ item.productName }}</div>
+          <div>{{ item.quantity }} x Rs.{{ item.price }}</div>
+        </div>
+        <div class="total-amount">Total: Rs.{{ total$ | async }}</div>
+      </div>
+
+   
+      <button type="submit">Complete Purchase</button>
+    </form>
+  </div>
+</div>

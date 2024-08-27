@@ -1,0 +1,60 @@
+
+
+<div class="container">
+  <nav class="side-navbar">
+      <div class="side-navbar-border">  
+        <h1 style="align-items: center;"> Categories </h1>
+        <ul *ngFor="let category of categories">
+          <p (click)="filterByCategory(category)">{{ category }}</p>
+        </ul>
+      
+      </div>
+       
+        <div   class="side-navbar-border">  
+          <h1> PriceRange </h1>
+        <ul *ngFor="let range of priceRanges">
+          <p  (click)="filterByPrice(range)">Rs.{{ range }}</p>
+        </ul>
+      </div>  
+   
+  </nav>
+
+<div class="product-content">
+  <div class="row">
+ <div class="column" *ngFor="let product of products; let i = index" [class.new-row]="i % 3 === 0"> 
+      <div class="product-card"> 
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.name">         
+          </div> 
+       
+
+      <div class="product-description">
+        <h1>{{ product.name }}</h1>
+       
+        <p>Price:  Rs.{{ product.price }}</p>
+        <p>Quantity: {{ product.quantity }}</p>
+        <p>Categories: {{ product.categories }}</p>
+      
+
+
+        <button routerLink="/product-details" 
+                [queryParams]="{
+          id:product.id
+
+        }">View More</button>
+        <br>
+
+
+
+
+       
+      </div>
+        
+    </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+

@@ -1,0 +1,108 @@
+
+.shopping-cart {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+
+  font-family: sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  background: #f3f3f3;
+  flex-direction: column;
+
+
+  background-image: url('https://t3.ftcdn.net/jpg/03/35/74/56/360_F_335745675_MaxYxSsadrviZdThITuHB2oCohYOiwEu.jpg'); /* Replace with your image path */
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+
+}
+  
+
+
+
+.cart-table {
+  width: 100%;
+ 
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.cart-table td input[type="number"] {
+  width: 50px;
+  padding: 5px;
+}
+
+.cart-table td button {
+  background-color: #261a46;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-table td button:hover {
+  background-color: #261a46;
+}
+
+
+h2 {
+  margin-top: 20px;
+}
+
+button {
+  background-color:  #261a46;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:  #261a46;
+}
+
+
+.empty-cart {
+  
+  width: 600px;
+  font-size: 18px;
+  color: #010101;
+  margin-top: 20px;
+  background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--shopping-ecommerce-simple-error-state-pack-user-interface-illustrations-6024626.png');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  
+  flex-direction: column;
+  margin: 0;
+}
+

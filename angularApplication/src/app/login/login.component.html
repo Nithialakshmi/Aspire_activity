@@ -1,0 +1,32 @@
+<br>
+    <div class="background-container">
+  
+    <br>
+    <br>
+    <div class="main"> 
+        <h1> Login </h1>
+       
+      
+          <form [formGroup]="loginForm" (ngSubmit)="login()" >
+          <div>
+            <label for="email">Email</label>
+            <input id="email" formControlName="email" >
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password">
+          </div>
+          <button type="submit">Login</button>
+          <p> Create have an Account 
+            <a href="/signup" >
+               Signup
+          </a>
+      </p>
+        
+      </form>
+      
+
+        
+   </div> 
+</div>
+

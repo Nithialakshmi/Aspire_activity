@@ -1,0 +1,66 @@
+
+
+
+
+
+ 
+   * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
+  
+ 
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } 
+
+
+
+  .zoom {
+    padding: 50px;
+   
+    transition: transform .2s;
+  
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5); 
+  }
+
+
+
+
+
+
+  .background {
+    background-image: url("https://i.pinimg.com/736x/73/7f/e8/737fe8396799a89a881d5d5b13c6ee79.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh; 
+  }
+
+
+
+
+
+  
+
+
+
+
+ 
+
+
+  
