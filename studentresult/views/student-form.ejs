@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">  
+    <link rel="stylesheet" href="/stylesheets/addstudent.css"> 
+  
+   
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script type="text/javascript" src="/javascripts/dashboard.js"></script>
+    <script type="text/javascript" src="/javascripts/addstudent.js"></script>
+
+  <title>addStudent</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/dashboard/student-count">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                          
+                            <a href="student/form">Add Student List</a>
+                            <a href="student/student-list">Manage Student List</a>
+                           
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                          
+                            <a href="/course/form">Add Course List</a>
+                            <a href="/course/course-list">Manage Course List</a>
+                       
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/result/form">Add Result</a>   
+                        </div>
+                    </div>
+                </li> 
+               
+                
+            </ul>
+            
+           <ul class="logout-mode">
+                <li><a href="/home">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                 <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+    <div class="dash-content" >
+        <div class="overview">
+            <div class="studentDetail"> 
+            <div class="title">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span class="text">Edit Student List</span>
+            </div>
+            
+            <div>
+                <div class="main" style="margin-left: 95px; align-items: center;">
+                    <h2 style=" text-align:center;">Edit Student Details</h2>
+                  
+
+                        <div class="student-detail">
+                            <form name="RegForm" action="<%=(typeof editData!='undefined')?'/student/edit/'+editData.rollno:'/student/create'%>" method="POST" onsubmit="return validateform()">
+                                <p>
+                                    <label for="first">Name:</label>
+                                    <input type="text" id="first" name="first" title="give the proper Name. characters only allowed" required value="<%=(typeof editData!='undefined')? editData.first:''%>" />
+                                    <span id="first-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="fname">Father Name:</label>
+                                    <input type="text" id="fname" name="fname" title="give the proper Name. characters only allowed" required value="<%=(typeof editData!='undefined')? editData.fname:''%>" />
+                                    <span id="fname-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="rollno">Register Number:</label>
+                                    <input type="text" id="rollno" name="rollno" title="give the proper Register Number. Integer only allowed" required value="<%=(typeof editData!='undefined')? editData.rollno:''%>"/>
+                                    <span id="rollno-error" class="error-message"></span>
+                                </p>
+
+                                <p>
+                                    <label for="dept">Department</label>
+                                    <select id="dept" name="dept">
+                                        <option value="None" <%=(typeof editData!='undefined' && editData.dept == 'None') ? 'selected' : ''%>>None</option>
+                                        <option value="CSE" <%=(typeof editData!='undefined' && editData.dept == 'CSE') ? 'selected' : ''%>>CSE</option>
+                                        <option value="IT" <%=(typeof editData!='undefined' && editData.dept == 'IT') ? 'selected' : ''%>>IT</option>
+                                        <option value="EEE" <%=(typeof editData!='undefined' && editData.dept == 'EEE') ? 'selected' : ''%>>EEE</option>
+                                    </select>
+                                    <span id="dept-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="year">Year</label>
+                                    <select id="year" name="year">
+                                        <option value="None" <%=(typeof editData!='undefined' && editData.year == 'None') ? 'selected' : ''%>>None</option>
+                                        <option value="I" <%=(typeof editData!='undefined' && editData.year == 'I') ? 'selected' : ''%>>I</option>
+                                        <option value="II" <%=(typeof editData!='undefined' && editData.year == 'II') ? 'selected' : ''%>>II</option>
+                                        <option value="III" <%=(typeof editData!='undefined' && editData.year == 'III') ? 'selected' : ''%>>III</option>
+                                        <option value="IV" <%=(typeof editData!='undefined' && editData.year == 'IV') ? 'selected' : ''%>>IV</option>
+                                        </select>
+                                        <span id="year-error" class="error-message"></span>
+                                </p>
+
+                                <p>
+                                    <label for="semester">Semester</label>
+                                    <select id="semester" name="semester">
+                                        <option value="None" <%=(typeof editData!='undefined' && editData.semester == 'None') ? 'selected' : ''%>>None</option>
+                                        <option value="Odd" <%=(typeof editData!='undefined' && editData.semester == 'Odd') ? 'selected' : ''%>> Odd</option>
+                                        <option value="Even" <%=(typeof editData!='undefined' && editData.semester == 'Even') ? 'selected' : ''%>> Even</option>
+                                    </select>
+                                    <span id="semester-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender">
+                                        <option value="None" <%=(typeof editData!='undefined' && editData.gender == 'None') ? 'selected' : ''%>>None</option>
+                                        <option value="Male" <%=(typeof editData!='undefined' && editData.gender == 'Male') ? 'selected' : ''%>>Male</option>
+                                        <option value="Female" <%=(typeof editData!='undefined' && editData.gender == 'Female') ? 'selected' : ''%>>Female</option>
+                                        <option value="Others" <%=(typeof editData!='undefined' && editData.gender == 'Others') ? 'selected' : ''%>>Others</option>
+                                    </select>
+                                </p> 
+                                <p>
+                                    <label for="dateofBirth">Date of Birth</label>
+                                    <input type="date" id="dateofBirth" name="dateofBirth"required value="<%=(typeof editData != 'undefined' && editData.dateofBirth) ? new Date(editData.dateofBirth).toISOString().split('T')[0] : ''%>"/>
+                                    <span id="dateofBirth-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" title="give the proper email id" required value="<%=(typeof editData!='undefined')? editData.email:''%>"/>
+                                    <span id="email-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long" required value="<%=(typeof editData!='undefined')? editData.password:''%>"/>
+                                    <span id="password-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <label for="mobile">Contact:</label>
+                                    <input type="text" id="mobile" name="mobile" maxlength="10" required value="<%=(typeof editData!='undefined')? editData.mobile:''%>"/>
+                                    <span id="mobile-error" class="error-message"></span>
+                                </p>
+                                <p>
+                                    <input type="submit" value="Submit" name="Submit" /><br>
+                                    <a href="/student/student-list">Back</a>
+
+                                </p>
+                            </form>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+
+
+
+ <!DOCTYPE html>
+
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+  
+     <link rel="stylesheet" href="/stylesheets/dashboard.css">  
+     <link rel="stylesheet" href="/stylesheets/addstudent.css"> 
+   
+
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+ 
+     <script type="text/javascript" src="/javascripts/dashboard.js"></script>
+     <script type="text/javascript" src="/javascripts/addresult.js"></script>
+ 
+   <title>addResult</title> 
+   <style>
+    .error-message { color: red; }
+  </style>
+  <script>
+    function validateform() {
+     
+      return true;
+    }
+    
+    function showAlert(message) {
+      alert(message);
+    }
+  </script>
+ </head>
+ <body>
+     <nav>
+         <div class="logo-name">
+             <div class="logo-image">
+                <img src="images/logo.png" alt="">
+             </div>
+ 
+             <span class="logo_name">Admin Panel</span>
+         </div>
+ 
+         <div class="menu-items">
+             <ul class="nav-links">
+                 <li><a href="/dashboard/student-count">
+                     <i class="uil uil-estate"></i>
+                     <span class="link-name">Dahsboard</span>
+                 </a></li>
+                 <li>
+                     <div class="dropdown">
+                         <button class="dropbtn">
+                             <span class="codicon--account"></span>
+                             <i class="uil uil-files-landscapes"></i> 
+                             <span class="link-name">Student </span>
+                             <span class="caret"></span>
+                         </button>
+                         <div class="dropdown-content">
+                             
+                             <a href="/student/form">Add Student List</a>
+                             <a href="/student/student-list">Manage Student List</a>
+                            
+                         </div>
+                     </div>
+                 </li>
+                 
+                 <li>
+                     <div class="dropdown">
+                         <button class="dropbtn">
+                             <span class="codicon--account"></span>
+                             <i class="uil uil-files-landscapes"></i> 
+                             <span class="link-name">Course</span>
+                             <span class="caret"></span>
+                         </button>
+                         <div class="dropdown-content">
+                           
+                             <a href="/course/form">Add Course List</a>
+                             <a href="/course/course-list">Manage Course List</a>
+                            
+                         </div>
+                     </div>
+                 </li>
+ 
+                 <li>
+                     <div class="dropdown">
+                         <button class="dropbtn">
+                             <span class="codicon--account"></span>
+                             <i class="uil uil-files-landscapes"></i> 
+                             <span class="link-name">Result</span>
+                             <span class="caret"></span>
+                         </button>
+                         <div class="dropdown-content">
+                             <a href=" ">Add Result</a>   
+                         </div>
+                     </div>
+                 </li>
+       
+                 
+             </ul>
+             
+            <ul class="logout-mode">
+                 <li><a href="/home">
+                     <i class="uil uil-signout"></i>
+                     <span class="link-name">Logout</span>
+                 </a></li>
+ 
+                  <li class="mode">
+                     <a href="#">
+                         <i class="uil uil-moon"></i>
+                     <span class="link-name">Dark Mode</span>
+                 </a>
+ 
+                 <div class="mode-toggle">
+                   <span class="switch"></span>
+                 </div>
+             </li>
+             </ul>
+         </div>
+     </nav>
+ 
+     <section class="dashboard">
+ 
+     <div class="dash-content" >
+         <div class="overview">
+             <div class="studentDetail"> 
+             <div class="title">
+                 <i class="uil uil-tachometer-fast-alt"></i>
+                 <span class="text">Add Result</span>
+             </div>
+             
+             <div>
+                 <div class="main" style="margin-left: 95px; align-items: center;">
+                     <h2 style=" text-align:center;">Create Result</h2>
+              
+                         <form name="RegForm" action="/result/create" method="POST" onsubmit=" return validateform()">
+                         
+                             <p>
+                                 <label for="rollno">Register Number:</label>
+                                 <input type="text" id="rollno" name="rollno" title="give the proper Register Number. Integer only allowed" required />
+                                 <span id="rollno-error" class="error-message"></span>
+                             </p>
+                             
+                             <p>
+                                 <input type="submit" value="Submit" name="Submit" />
+                             </p>
+                         </form>
+
+                         <% if (typeof alertMessage !== 'undefined') { %>
+                            <script>
+                              showAlert("<%= alertMessage %>");
+                            </script>
+                          <% } %>
+
+                         
+
+                         
+
+                 </div>
+                 </div>
+         </div>
+         </div>
+ 
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+    
+ </body>
+ </html>

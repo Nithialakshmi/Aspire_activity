@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Login Form</title>
+
+<link rel="stylesheet" href="/stylesheets/login.css"/>
+<script type="text/javascript" src="/javascripts/login.js"></script>
+</head>
+<body>
+    <html> 
+    <head>
+        <title>Admin login</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  body {
+    background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+ 
+
+
+
+  }
+</style>
+
+
+    </head>
+    <body>
+<nav class="navbar navbar-default">
+    <div style="background-color:black">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Dream college of Engineering</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="/home">Home</a></li>
+    
+      <li class="active"><a href="#">Login</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+<div class="container" style="align-items: center; ">
+<div class="main" >
+<h2 style="color: #fffbf4;"> Login Form </h2>
+<form id="form_id"action="/login/create" method="POST" name="myform">
+<label>Email </label>
+<input type="text" name="email" id="email"/>
+<label>Password </label>
+<input type="password" name="password" id="password"/>
+<a href="/forgotpassword"style="text-align:center"> Forgot password</a>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+<br>
+<p>   Don't have an account?
+<a href="/signup/form"style="text-align:center"><b>SignUp </b> </a>
+</p>
+</form>
+
+</div>
+</body>
+</html>
+
+

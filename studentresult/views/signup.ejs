@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/addstudent.css"> 
+    <title>SignUp</title>
+    <script type="text/javascript" src="/javascripts/signup.js"></script>
+</head>
+<body style=" background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D');
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat;">
+    <h1>Sign Up</h1>
+    <form name="SignupForm" action="/signup/create" method="POST" onsubmit="return formvalidation()">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" title="give the proper Name. characters only allowed" required />
+            <span id="name-error" class="error-message"></span>
+        </p>
+       
+        <p>
+            <label for="designation">Designation</label>
+            <select id="designation" name="designation">
+                <option value="None">None</option>
+                <option value="Admin">Admin</option>
+                <option value="Student">Student</option>
+            </select>
+            <span id="designation-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="None">None</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+            <span id="gender-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="dateofBirth">Date of Birth</label>
+            <input type="date" id="dateofBirth" name="dateofBirth">
+            <span id="dateofBirth-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" title="give the proper email id" required />
+            <span id="email-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long" required />
+            <span id="password-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="mobile">Contact:</label>
+            <input type="text" id="mobile" name="mobile" maxlength="10" required />
+            <span id="mobile-error" class="error-message"></span>
+        </p>
+        <p>Security Question</p>
+        <p>
+            <label for="question">Favourite place</label>
+            <input type="text" id="question" name="question" maxlength="10" required />
+            <span id="question-error" class="error-message"></span>
+        </p>
+
+        <p style="text-align: center;">
+            <input type="submit" value="Submit" name="Submit" /><br>
+            <a href="/login/form">Back</a>
+        </p>
+    </form>
+   
+</body>
+</html>

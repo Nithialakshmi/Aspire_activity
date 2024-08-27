@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">  
+    <link rel="stylesheet" href="/stylesheets/addstudent.css"> 
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>AddCourse</title> 
+
+
+  <script  type="text/javascript" src="/javascripts/dashboard.js"></script>
+  <script type="text/javascript" src="/javascripts/addcourse.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/dashboard/student-count">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/student/form">Add Student List</a>
+                            <a href="/student/student-list">Manage Student List</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                        
+                            <a href="/course/form">Add Course List</a>
+                            <a href="/course/course-list">Manage Course List</a>
+                        
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                           
+                            <a href="/result/form">Add Result</a>
+                           
+                        </div>
+                    </div>
+                </li>
+               
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="/home">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+    <div class="dash-content" >
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span class="text">Edit Course</span>
+            </div>
+            
+            <div>
+                <div class="main" style="margin-left: 95px; align-items: center;">
+                    <h2 style=" text-align:center;">Edit Course Details</h2>
+                  
+<div class="course-detail">
+
+    <form name="myform" action="<%=(typeof editData!='undefined')?'/course/edit/'+editData.courseid:'/course/create'%>" method="POST" onsubmit="return validationform()">
+        <p>
+            <label for="courseid">Course Id</label>
+            <input type="text" id="courseid" name="courseid" title="give the proper Name. characters only allowed" required value="<%=(typeof editData!='undefined')? editData.courseid:''%>" />
+            <span id="courseid-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="coursename">Course Name</label>
+            <input type="text" id="coursename" name="coursename" title="give the proper Name. characters only allowed" required value="<%=(typeof editData!='undefined')? editData.coursename:''%>"/>
+            <span id="coursename-error" class="error-message"></span>
+        </p>
+        
+        <p>
+            <label for="dept">Department</label>
+            <select id="dept" name="dept">
+                <option value="None" <%=(typeof editData!='undefined' && editData.dept == 'None') ? 'selected' : ''%>>None</option>
+                <option value="CSE" <%=(typeof editData!='undefined' && editData.dept == 'CSE') ? 'selected' : ''%>>CSE</option>
+                <option value="IT" <%=(typeof editData!='undefined' && editData.dept == 'IT') ? 'selected' : ''%>>IT</option>
+                <option value="EEE" <%=(typeof editData!='undefined' && editData.dept == 'EEE') ? 'selected' : ''%>>EEE</option>
+            </select>
+            <span id="dept-error" class="error-message"></span>
+        </p>
+        <p>
+            <label for="year">Year</label>
+            <select id="year" name="year">
+                <option value="None" <%=(typeof editData!='undefined' && editData.year == 'None') ? 'selected' : ''%>>None</option>
+                <option value="I" <%=(typeof editData!='undefined' && editData.year == 'I') ? 'selected' : ''%>>I</option>
+                <option value="II" <%=(typeof editData!='undefined' && editData.year == 'II') ? 'selected' : ''%>>II</option>
+                <option value="III" <%=(typeof editData!='undefined' && editData.year == 'III') ? 'selected' : ''%>>III</option>
+                <option value="IV" <%=(typeof editData!='undefined' && editData.year == 'IV') ? 'selected' : ''%>>IV</option>
+                </select>
+                <span id="year-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester">
+                <option value="None" <%=(typeof editData!='undefined' && editData.semester == 'None') ? 'selected' : ''%>>None</option>
+                <option value="Odd" <%=(typeof editData!='undefined' && editData.semester == 'Odd') ? 'selected' : ''%>> Odd</option>
+                <option value="Even" <%=(typeof editData!='undefined' && editData.semester == 'Even') ? 'selected' : ''%>> Even</option>
+            </select>
+            <span id="semester-error" class="error-message"></span>
+        </p>
+        <p>
+            <input type="submit" value="Submit" name="Submit" /><br>
+            <a href="/course/course-list">Back</a>
+        </p>
+    </form>
+</div>
+                </div>
+        </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+</body>
+</html>

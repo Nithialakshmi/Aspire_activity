@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">  
+    <link rel="stylesheet" href="/stylesheets/addstudent.css"> 
+
+
+    
+    <script  type="text/javascript" src="/javascripts/dashboard.js"></script>
+
+  
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <title>Admin to add the Student</title> 
+
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Admin Panel</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/dashboard/student-count">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Student </span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/student/form">Add Student List</a>
+                            <a href="">Manage Student List</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Course</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                        
+                            <a href="/course/form">Add Course List</a>
+                            <a href="/course/course-list">Manage Course List</a>
+                          
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span class="codicon--account"></span>
+                            <i class="uil uil-files-landscapes"></i> 
+                            <span class="link-name">Result</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/result/form">Add Result</a>
+                        </div>
+                    </div>
+                </li>
+               
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="/home">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+    <div class="dash-content" >
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span class="text">Add Student List</span>
+            </div>
+            
+            <table id="student" style="width: 50%;">
+                <tr>
+                  <th>Name</th>
+                  <th>FatherName</th>
+                  <th>RegisterNumber</th>
+                  <th>Department</th>
+                  <th>Year</th>
+                  <th>Semester</th>
+                  <th>Gender</th>
+                  <th>DateofBirth</th>
+                  <th>Email</th>
+             
+                  <th>Contact</th>
+                  <th> Edit </th>
+                  <th> Delete </th>
+                  
+             
+                </tr>
+                <% if (studentData.length !== 0) { %>
+                    <% studentData.forEach(function(data, index) { %>
+                      <tr>
+                       
+                        <td><%= data.first %></td>
+                        <td><%= data.fname %></td>
+                        <td><%= data.rollno %></td>
+                        <td><%= data.dept %></td>
+                        <td><%= data.year %></td>
+                        <td><%= data.semester %></td> 
+                        <td><%= data.gender %></td>
+                       
+
+                        <td>
+                            <script>
+                              var dateofBirth = new Date("<%= data.dateofBirth %>");
+                              var options = { year: 'numeric', month: 'short', day: 'numeric' };
+                              var formattedDate = dateofBirth.toLocaleDateString('en-US', options);
+                              document.write(formattedDate);
+                            </script>
+                          </td>
+                      
+                        <td><%= data.email %></td>
+                     
+                        <td><%= data.mobile %></td>
+                        <td><a href="/student/edit/<%=data.rollno%>"><i class="fa fa-edit" style="font-size:24px"></i></a></td>
+                        <td><a href="/student/delete/<%=data.rollno%>"><i class="fa fa-trash" style="font-size:24px"></i></a></td>
+                    
+                      </tr>
+                    <% }); %>
+                  <% } else { %>
+                    <tr>
+                      <td colspan="7">No Data Found</td>
+                    </tr>
+                  <% } %>
+                        
+              </table>
+    </div>
+</section>
+
+    <script type="text/javascript" src="/javascripts/dashboard.js"></script>
+    <script type="text/javascript" src="/javascripts/addstudent.js"></script>
+</body>
+</html>
+
+
+
+   
+   
+
+ 
+    
+      
